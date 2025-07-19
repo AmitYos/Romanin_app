@@ -26,3 +26,13 @@ button {
 button:hover {
   background-color: #357ab7;
 }
+
+.correct {
+  color: green;
+  font-weight: bold;
+}
+
+.incorrect {
+  color: red;
+  font-weight: bold;
+}
