@@ -38,27 +38,27 @@ function getLessonContent(num) {
         <li><button class="audio-btn" onclick="playAudio('Noi suntem prieteni')">🔊</button>אנחנו חברים. – Noi suntem prieteni.</li>
         <li><button class="audio-btn" onclick="playAudio('Da, tu ești Michael')">🔊</button>כן, אתה מייקל. – Da, tu ești Michael.</li>
         <li><button class="audio-btn" onclick="playAudio('Nu, eu sunt Nico')">🔊</button>לא, אני ניקו. – Nu, eu sunt Nico.</li>
-      </ul>
+      </table>
 
       <h3>השלם את המשפט:</h3>
       <ul id="quiz" class="ltr">
         ${generateQuiz()}
-      </ul>
+      </table>
       <button onclick="checkAnswers()">בדוק תשובות</button>
 
       <h3>אוצר מילים:</h3>
-      <ul>
-        <li>Salut – שלום</li>
-        <li>Eu – אני</li>
-        <li>sunt – (אני) להיות</li>
-        <li>El – הוא</li>
-        <li>este – (הוא/היא) להיות</li>
-        <li>Noi – אנחנו</li>
-        <li>suntem – (אנחנו) להיות</li>
-        <li>prieteni – חברים (יחיד: prieten)</li>
-        <li>Nu – לא</li>
-        <li>Da – כן</li>
-      </ul>
+      <table><tr><th>עברית</th><th>יחיד</th><th>רבים</th></tr>
+        <tr><td>שלום</td><td>Salut</td><td>–</td></tr>
+        <tr><td>אני</td><td>Eu</td><td>–</td></tr>
+        <tr><td>להיות (אני)</td><td>sunt</td><td>–</td></tr>
+        <tr><td>הוא</td><td>El</td><td>–</td></tr>
+        <tr><td>להיות (הוא/היא)</td><td>este</td><td>–</td></tr>
+        <tr><td>אנחנו</td><td>Noi</td><td>–</td></tr>
+        <tr><td>להיות (אנחנו)</td><td>suntem</td><td>–</td></tr>
+        <tr><td>חבר</td><td>prieten</td><td>prieteni</td></tr>
+        <tr><td>לא</td><td>Nu</td><td>–</td></tr>
+        <tr><td>כן</td><td>Da</td><td>–</td></tr>
+      </table>
     `;
   }
   return '';
