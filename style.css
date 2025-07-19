@@ -37,10 +37,6 @@ button:hover {
   font-weight: bold;
 }
 
-.rtl {
-  direction: rtl;
-}
-
 .ltr {
   direction: ltr;
   text-align: left;
@@ -57,4 +53,12 @@ table, th, td {
   border: 1px solid #ccc;
   text-align: center;
   padding: 8px;
+}
+
+.audio-btn {
+  margin-right: 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 16px;
 }
