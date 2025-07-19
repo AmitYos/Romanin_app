@@ -10,19 +10,18 @@ function getLessonContent(num) {
   if (num === 1) {
     return `
       <h2>שיעור 1: היכרות</h2>
-      <h3>גופים אישיים</h3>
-      <ul>
-        <li><b>אני</b> – Eu</li>
-        <li><b>אתה</b> – Tu (זכר)</li>
-        <li><b>את</b> – Tu (נקבה)</li>
-        <li><b>הוא</b> – El</li>
-        <li><b>היא</b> – Ea</li>
-        <li><b>אנחנו</b> – Noi</li>
-        <li><b>אתם</b> – Voi (זכר/מעורב)</li>
-        <li><b>אתן</b> – Voi (נקבה)</li>
-        <li><b>הם</b> – Ei</li>
-        <li><b>הן</b> – Ele</li>
-      </ul>
+      <h3>גופים אישיים + הפועל "to be"</h3>
+      <table>
+        <tr><th>עברית</th><th>רומנית</th><th>To be</th></tr>
+        <tr><td>אני</td><td>Eu</td><td>sunt</td></tr>
+        <tr><td>אתה/את</td><td>Tu</td><td>ești</td></tr>
+        <tr><td>הוא</td><td>El</td><td>este</td></tr>
+        <tr><td>היא</td><td>Ea</td><td>este</td></tr>
+        <tr><td>אנחנו</td><td>Noi</td><td>suntem</td></tr>
+        <tr><td>אתם/אתן</td><td>Voi</td><td>sunteți</td></tr>
+        <tr><td>הם</td><td>Ei</td><td>sunt</td></tr>
+        <tr><td>הן</td><td>Ele</td><td>sunt</td></tr>
+      </table>
 
       <h3>משפטים פשוטים:</h3>
       <ul>
@@ -36,7 +35,7 @@ function getLessonContent(num) {
       </ul>
 
       <h3>השלם את המשפט:</h3>
-      <ul id="quiz">
+      <ul id="quiz" class="ltr">
         <li>
           (___) sunt Emma.
           <select>
@@ -78,7 +77,6 @@ function checkAnswers() {
   quiz.forEach((item, index) => {
     const select = item.querySelector('select');
     const existing = item.querySelector('span');
-
     if (existing) existing.remove();
 
     const result = document.createElement('span');
