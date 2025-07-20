@@ -1,3 +1,39 @@
+
+  let romanianVoice = null;
+
+  function loadVoicesAndSetRomanian() {
+    const voices = speechSynthesis.getVoices();
+    romanianVoice = voices.find(voice => voice.lang === 'ro-RO');
+
+    if (romanianVoice) {
+      console.log("✅ Romanian voice found:", romanianVoice.name);
+    } else {
+      console.log("❌ Romanian voice not found.");
+    }
+  }
+
+  // Load voices (some browsers need this event)
+  if (speechSynthesis.onvoiceschanged !== undefined) {
+    speechSynthesis.onvoiceschanged = loadVoicesAndSetRomanian;
+  }
+
+  // Fallback for immediate load
+  loadVoicesAndSetRomanian();
+
+  function playAudio(text) {
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'ro-RO';
+
+    if (romanianVoice) {
+      utterance.voice = romanianVoice;
+    } else {
+      console.warn("Using default voice. Romanian not explicitly selected.");
+    }
+
+    speechSynthesis.speak(utterance);
+  }
+
+
 let lessonVisible = false;
 
 function toggleLesson(num) {
