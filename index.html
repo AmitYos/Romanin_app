@@ -2,12 +2,29 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
-  <meta charset="UTF-8">
-  <title>Romanian Lesson</title>
+  <meta charset="UTF-8" />
+  <title>לימוד רומנית</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body { font-family: sans-serif; direction: rtl; padding: 20px; background: #f7f7f7; }
+    button { margin: 5px 0; padding: 5px 10px; }
+    .section { border: 1px solid #ccc; padding: 10px; margin-bottom: 15px; background: white; }
+    .hidden { display: none; }
+    table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+    th, td { border: 1px solid #999; padding: 6px; text-align: center; }
+    .correct { color: green; font-weight: bold; }
+    .incorrect { color: red; font-weight: bold; }
+  </style>
 </head>
 <body>
-  <h1>שיעור רומנית</h1>
-  <div id="lesson"></div>
+  <h1>לימוד רומנית</h1>
+
+  <button onclick="toggleLesson(1)">שיעור 1: גופים והיכרות</button>
+  <div id="lesson1" class="section hidden"></div>
+
+  <button onclick="toggleLesson(2)">שיעור 2: צבעים</button>
+  <div id="lesson2" class="section hidden"></div>
+
   <script src="app.js"></script>
 </body>
 </html>
